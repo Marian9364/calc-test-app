@@ -38,10 +38,11 @@ function onClick() {
         return alert("Operator must be some of the following: +, -, /, *")
     }
     
+    firstField.value = "";
+    secondField.value = "";
+    operator.value = "";
 
 
 }
 
-    firstFieldValue = "";
-    secondFieldValue = "";
-    operatorValue = "";
+
