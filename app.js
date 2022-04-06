@@ -39,8 +39,9 @@ function onClick() {
     }
     
 
+
+}
+
     firstFieldValue = "";
     secondFieldValue = "";
     operatorValue = "";
-
-}
