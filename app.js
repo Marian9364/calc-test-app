@@ -14,17 +14,17 @@ function onClick() {
     let secondFieldValue = Number(secondField.value);
     let operatorValue = operator.value;
 
-    if( isNaN(firstFieldValue) || isNaN(secondFieldValue)){
+    if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
         return alert("Both number fields must be a number");
     }
 
     if (!firstFieldValue || !secondFieldValue || !operatorValue) {
         return alert("All fields are required and with correct type!")
     }
-  
+
     if (operatorValue == "+") {
         resultField.innerText = firstFieldValue + secondFieldValue;
-    } 
+    }
     else if (operatorValue == "-") {
         resultField.innerText = firstFieldValue - secondFieldValue;
     }
@@ -33,11 +33,11 @@ function onClick() {
     }
     else if (operatorValue == "*") {
         resultField.innerText = firstFieldValue * secondFieldValue;
-   
+
     } else {
         return alert("Operator must be some of the following: +, -, /, *")
     }
-    
+
     firstField.value = "";
     secondField.value = "";
     operator.value = "";

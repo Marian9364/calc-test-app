@@ -1,7 +1,7 @@
 #root {
     text-align: center;
-    
 }
+
 #result {
     text-decoration: solid;
     text-decoration:double;
@@ -9,9 +9,11 @@
     background-color: aquamarine;
     padding:25px
 }
+
 button {
     background-color: rgb(224, 200, 200);
 }
+
 footer {
     text-align: center;
 }
