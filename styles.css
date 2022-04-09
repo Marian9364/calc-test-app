@@ -9,26 +9,25 @@
 } */
 
 #root {
-    text-align: center;
-    
+  text-align: center;
 }
 #result {
-    text-decoration: solid;
-    text-decoration:double;
-    font-size: x-large;
-    background-color: aquamarine;
-    padding:25px
+  text-decoration: solid;
+  text-decoration: double;
+  font-size: x-large;
+  background-color: aquamarine;
+  padding: 25px;
 }
 button#calc-btn {
-    background-color: rgb(254, 153, 237);
-    border-radius: 8px;
-    border: 2px solid #00040a;
-    font-size: 20px;
-    padding: 14px 40px; 
-    margin: 25px;
+  background-color: rgb(254, 153, 237);
+  border-radius: 8px;
+  border: 2px solid #00040a;
+  font-size: 20px;
+  padding: 14px 40px;
+  margin: 25px;
 }
 
 #calc-btn:hover {
-    background-color: #cf55c2;
-    color:white;
+  background-color: #cf55c2;
+  color: white;
 }
