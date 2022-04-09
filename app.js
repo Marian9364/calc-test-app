@@ -73,28 +73,36 @@ function onClick(e) {
       numberOfLength = historyUL.children.length;
     }
   }
+  addBtn.style.backgroundColor = "aquamarine";
+  subtractBtn.style.backgroundColor = "aquamarine";
+  multiplyBtn.style.backgroundColor = "aquamarine";
+  divideBtn.style.backgroundColor = "aquamarine";
 }
 
 function onAdd(e) {
   e.preventDefault();
 
   operatorValue = "+";
+  addBtn.style.backgroundColor = "rgb(254, 153, 237)";
 }
 
 function onSubtract(e) {
   e.preventDefault();
 
   operatorValue = "-";
+  subtractBtn.style.backgroundColor = "rgb(254, 153, 237)";
 }
 
 function onMultiply(e) {
   e.preventDefault();
 
   operatorValue = "*";
+  multiplyBtn.style.backgroundColor = "rgb(254, 153, 237)";
 }
 
 function onDivide(e) {
   e.preventDefault();
 
   operatorValue = "/";
+  multiplyBtn.style.backgroundColor = "rgb(254, 153, 237)";
 }

@@ -82,3 +82,7 @@ h3 span {
   -webkit-text-stroke: 1px black;
   padding: 0 10px;
 }
+
+ul {
+  padding: 0;
+}
