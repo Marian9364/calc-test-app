@@ -1,48 +1,39 @@
-const fieldDiv = document.getElementById('root');
-const resultField = document.getElementById('result');
+const fieldDiv = document.getElementById("root");
+const resultField = document.getElementById("result");
 
-let firstField = document.getElementById('first-number');
-let secondField = document.getElementById('second-number');
-let operator = document.getElementById('operator');
-let calcBtn = document.getElementById('calc-btn');
+let firstField = document.getElementById("first-number");
+let secondField = document.getElementById("second-number");
+let operator = document.getElementById("operator");
+let calcBtn = document.getElementById("calc-btn");
 
-
-calcBtn.addEventListener('click', onClick);
+calcBtn.addEventListener("click", onClick);
 
 function onClick() {
-    let firstFieldValue = Number(firstField.value);
-    let secondFieldValue = Number(secondField.value);
-    let operatorValue = operator.value;
+  let firstFieldValue = Number(firstField.value);
+  let secondFieldValue = Number(secondField.value);
+  let operatorValue = operator.value;
 
-    if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
-        return alert("Both number fields must be a number");
-    }
+  if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
+    return alert("Both number fields must be a number");
+  }
 
-    if (!firstFieldValue || !secondFieldValue || !operatorValue) {
-        return alert("All fields are required and with correct type!")
-    }
+  if (!firstFieldValue || !secondFieldValue || !operatorValue) {
+    return alert("All fields are required and with correct type!");
+  }
 
-    if (operatorValue == "+") {
-        resultField.innerText = firstFieldValue + secondFieldValue;
-    }
-    else if (operatorValue == "-") {
-        resultField.innerText = firstFieldValue - secondFieldValue;
-    }
-    else if (operatorValue == "/") {
-        resultField.innerText = firstFieldValue / secondFieldValue;
-    }
-    else if (operatorValue == "*") {
-        resultField.innerText = firstFieldValue * secondFieldValue;
+  if (operatorValue == "+") {
+    resultField.innerText = firstFieldValue + secondFieldValue;
+  } else if (operatorValue == "-") {
+    resultField.innerText = firstFieldValue - secondFieldValue;
+  } else if (operatorValue == "/") {
+    resultField.innerText = firstFieldValue / secondFieldValue;
+  } else if (operatorValue == "*") {
+    resultField.innerText = firstFieldValue * secondFieldValue;
+  } else {
+    return alert("Operator must be some of the following: +, -, /, *");
+  }
 
-    } else {
-        return alert("Operator must be some of the following: +, -, /, *")
-    }
-
-    firstField.value = "";
-    secondField.value = "";
-    operator.value = "";
-
-
+  firstField.value = "";
+  secondField.value = "";
+  operator.value = "";
 }
-
-
