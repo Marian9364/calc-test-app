@@ -19,7 +19,16 @@
     background-color: aquamarine;
     padding:25px
 }
-button {
-    background-color: rgb(224, 200, 200);
-    margin: 20px;
+button#calc-btn {
+    background-color: rgb(254, 153, 237);
+    border-radius: 8px;
+    border: 2px solid #00040a;
+    font-size: 20px;
+    padding: 14px 40px; 
+    margin: 25px;
+}
+
+#calc-btn:hover {
+    background-color: #cf55c2;
+    color:white;
 }
