@@ -2,14 +2,25 @@ const historyUL = document.getElementById("history");
 const historyTitle = document.getElementById("history-title");
 const fieldDiv = document.getElementById("root");
 const resultField = document.getElementById("result");
+const addBtn = document.getElementById("add");
+const subtractBtn = document.getElementById("subtract");
+const multiplyBtn = document.getElementById("multiply");
+const divideBtn = document.getElementById("divide");
 
 let firstField = document.getElementById("first-number");
 let secondField = document.getElementById("second-number");
-let operator = document.getElementById("operator");
 let calcBtn = document.getElementById("calc-btn");
+
+let operatorValue = "";
 let numberOfLength = 0;
 
 historyTitle.style.display = "none";
+
+addBtn.addEventListener("click", onAdd);
+subtractBtn.addEventListener("click", onSubtract);
+multiplyBtn.addEventListener("click", onMultiply);
+divideBtn.addEventListener("click", onDivide);
+
 calcBtn.addEventListener("click", onClick);
 
 function onClick(e) {
@@ -17,7 +28,6 @@ function onClick(e) {
 
   let firstFieldValue = Number(firstField.value);
   let secondFieldValue = Number(secondField.value);
-  let operatorValue = operator.value;
 
   if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
     return alert("Both number fields must be a number");
@@ -41,7 +51,6 @@ function onClick(e) {
 
   firstField.value = "";
   secondField.value = "";
-  operator.value = "";
 
   historyTitle.style.display = "inline-block";
 
@@ -54,7 +63,6 @@ function onClick(e) {
       historyUL.appendChild(li);
 
       numberOfLength = historyUL.children.length;
-      console.log(numberOfLength);
     } else {
       historyUL.replaceChildren();
 
@@ -65,4 +73,28 @@ function onClick(e) {
       numberOfLength = historyUL.children.length;
     }
   }
+}
+
+function onAdd(e) {
+  e.preventDefault();
+
+  operatorValue = "+";
+}
+
+function onSubtract(e) {
+  e.preventDefault();
+
+  operatorValue = "-";
+}
+
+function onMultiply(e) {
+  e.preventDefault();
+
+  operatorValue = "*";
+}
+
+function onDivide(e) {
+  e.preventDefault();
+
+  operatorValue = "/";
 }

@@ -1,6 +1,17 @@
 #root {
   text-align: center;
 }
+
+#footer {
+  text-align: center;
+  margin-top: 40%;
+}
+
+#title {
+  color: aquamarine;
+  -webkit-text-stroke: 1px black;
+}
+
 #result {
   text-decoration: solid;
   text-decoration: double;
@@ -15,6 +26,39 @@ button#calc-btn {
   font-size: 20px;
   padding: 14px 40px;
   margin: 25px;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+  background-color: aquamarine;
+}
+
+#add:hover {
+  background-color: rgb(61, 197, 151);
+}
+#subtract:hover {
+  background-color: rgb(61, 197, 151);
+}
+#multiply:hover {
+  background-color: rgb(61, 197, 151);
+}
+#divide:hover {
+  background-color: rgb(61, 197, 151);
+}
+
+#add:focus {
+  background-color: rgb(254, 153, 237);
+}
+#subtract:focus {
+  background-color: rgb(254, 153, 237);
+}
+#multiply:focus {
+  background-color: rgb(254, 153, 237);
+}
+#divide:focus {
+  background-color: rgb(254, 153, 237);
 }
 
 #calc-btn:hover {

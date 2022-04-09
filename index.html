@@ -7,24 +7,27 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
-    <title>Calculator</title>
+    <title>Simple Calculator</title>
   </head>
 
   <body>
     <main id="root">
-      <h1>Calculator</h1>
+      <h1 id="title">Simple Calculator &#169</h1>
       <p>First Number:</p>
       <input type="text" id="first-number" />
       <p>Operator:</p>
-      <input type="text" id="operator" />
+      <button id="add">+</button>
+      <button id="subtract">-</button>
+      <button id="multiply">*</button>
+      <button id="divide">/</button>
       <p>Second Number:</p>
       <input type="text" id="second-number" /><br />
       <button id="calc-btn">Click here to Calculate</button>
       <div id="result"></div>
-      <h2>Allowed operators are: +, -, /, *</h2>
       <h3 id="history-title"><span>HISTORY</span></h3>
       <ul id="history"></ul>
     </main>
+    <footer id="footer"> Mariyan's Project &#8482</footer>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
