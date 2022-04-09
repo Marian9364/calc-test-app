@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-   
+
     <title>Calculator</title>
   </head>
 
   <body>
     <main id="root">
       <h1>Calculator</h1>
-      <p>First Number:</p> 
-      <input type="text" id="first-number"/>
-      <p>Operator:</p> 
-      <input type="text" id="operator"/>
-      <p>Second Number:</p> 
-      <input type="text" id="second-number"/><br>
+      <p>First Number:</p>
+      <input type="text" id="first-number" />
+      <p>Operator:</p>
+      <input type="text" id="operator" />
+      <p>Second Number:</p>
+      <input type="text" id="second-number" /><br />
       <button id="calc-btn">Click here to Calculate</button>
       <div id="result"></div>
       <h2>Allowed operators are: +, -, /, *</h2>
+      <h3 id="history-title"><span>HISTORY</span></h3>
+      <ul id="history"></ul>
     </main>
     <script type="text/javascript" src="app.js"></script>
   </body>

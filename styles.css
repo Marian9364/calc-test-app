@@ -30,5 +30,21 @@ button#calc-btn {
 #calc-btn:hover {
   background-color: #cf55c2;
   color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+h3 span {
+  background: #fff;
+  color: aquamarine;
+  -webkit-text-stroke: 1px black;
+  padding: 0 10px;
 }
