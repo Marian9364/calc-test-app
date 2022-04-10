@@ -81,7 +81,6 @@ function onClick(e) {
   subtractBtn.style.backgroundColor = "aquamarine";
   multiplyBtn.style.backgroundColor = "aquamarine";
   divideBtn.style.backgroundColor = "aquamarine";
-  fir
 }
 
 function onAdd(e) {
