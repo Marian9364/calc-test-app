@@ -88,6 +88,11 @@ function onAdd(e) {
 
   operatorValue = "+";
   addBtn.style.backgroundColor = "rgb(254, 153, 237)";
+
+  subtractBtn.style.backgroundColor = "aquamarine";
+  multiplyBtn.style.backgroundColor = "aquamarine";
+  divideBtn.style.backgroundColor = "aquamarine";
+
 }
 
 function onSubtract(e) {
@@ -95,6 +100,10 @@ function onSubtract(e) {
 
   operatorValue = "-";
   subtractBtn.style.backgroundColor = "rgb(254, 153, 237)";
+
+  addBtn.style.backgroundColor = "aquamarine";
+  multiplyBtn.style.backgroundColor = "aquamarine";
+  divideBtn.style.backgroundColor = "aquamarine";
 }
 
 function onMultiply(e) {
@@ -102,11 +111,19 @@ function onMultiply(e) {
 
   operatorValue = "*";
   multiplyBtn.style.backgroundColor = "rgb(254, 153, 237)";
+
+  addBtn.style.backgroundColor = "aquamarine";
+  subtractBtn.style.backgroundColor = "aquamarine";
+  divideBtn.style.backgroundColor = "aquamarine";
 }
 
 function onDivide(e) {
   e.preventDefault();
 
   operatorValue = "/";
-  multiplyBtn.style.backgroundColor = "rgb(254, 153, 237)";
+  divideBtn.style.backgroundColor = "rgb(254, 153, 237)";
+
+  subtractBtn.style.backgroundColor = "aquamarine";
+  multiplyBtn.style.backgroundColor = "aquamarine";
+  addBtn.style.backgroundColor = "aquamarine";
 }
