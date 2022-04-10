@@ -11,6 +11,8 @@ let firstField = document.getElementById("first-number");
 let secondField = document.getElementById("second-number");
 let calcBtn = document.getElementById("calc-btn");
 
+
+
 let operatorValue = "";
 let numberOfLength = 0;
 
@@ -28,6 +30,8 @@ function onClick(e) {
 
   let firstFieldValue = Number(firstField.value);
   let secondFieldValue = Number(secondField.value);
+  let firstFieldValueForHistory = firstFieldValue;
+  let secondFieldValueForHistory = secondFieldValue;
 
   if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
     return alert("Both number fields must be a number");
@@ -48,7 +52,7 @@ function onClick(e) {
   } else {
     return alert("Operator must be some of the following: +, -, /, *");
   }
-
+  
   firstField.value = "";
   secondField.value = "";
 
@@ -57,9 +61,9 @@ function onClick(e) {
   if (resultField.innerHTML != "") {
     if (numberOfLength < 5) {
       let li = document.createElement("li");
-      let lastNumber = resultField.innerText;
+      let equation = `${firstFieldValue} ${operatorValue} ${secondFieldValue} = ${resultField.innerText}`;
 
-      li.innerText = lastNumber;
+      li.innerText = equation;
       historyUL.appendChild(li);
 
       numberOfLength = historyUL.children.length;
@@ -77,6 +81,7 @@ function onClick(e) {
   subtractBtn.style.backgroundColor = "aquamarine";
   multiplyBtn.style.backgroundColor = "aquamarine";
   divideBtn.style.backgroundColor = "aquamarine";
+  fir
 }
 
 function onAdd(e) {
