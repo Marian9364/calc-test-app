@@ -71,7 +71,7 @@ function onClick(e) {
       historyUL.replaceChildren();
 
       let li = document.createElement("li");
-      let lastNumber = resultField.innerText;
+      let lastNumber = `${firstFieldValue} ${operatorValue} ${secondFieldValue} = ${resultField.innerText}`;
       li.innerText = lastNumber;
       historyUL.appendChild(li);
       numberOfLength = historyUL.children.length;
