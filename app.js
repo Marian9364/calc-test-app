@@ -52,7 +52,7 @@ function onClick(e) {
   } else {
     return alert("Operator must be some of the following: +, -, /, *");
   }
-  
+
   firstField.value = "";
   secondField.value = "";
 
