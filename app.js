@@ -11,8 +11,6 @@ let firstField = document.getElementById("first-number");
 let secondField = document.getElementById("second-number");
 let calcBtn = document.getElementById("calc-btn");
 
-
-
 let operatorValue = "";
 let numberOfLength = 0;
 
@@ -23,9 +21,9 @@ subtractBtn.addEventListener("click", onSubtract);
 multiplyBtn.addEventListener("click", onMultiply);
 divideBtn.addEventListener("click", onDivide);
 
-calcBtn.addEventListener("click", onClick);
+calcBtn.addEventListener("click", onCalculate);
 
-function onClick(e) {
+function onCalculate(e) {
   e.preventDefault();
 
   let firstFieldValue = Number(firstField.value);
@@ -33,12 +31,8 @@ function onClick(e) {
   let firstFieldValueForHistory = firstFieldValue;
   let secondFieldValueForHistory = secondFieldValue;
 
-  if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
-    return alert("Both number fields must be a number");
-  }
-
   if (!firstFieldValue || !secondFieldValue || !operatorValue) {
-    return alert("All fields are required and with correct type!");
+    return alert("All fields are required!");
   }
 
   if (operatorValue == "+") {
@@ -49,12 +43,7 @@ function onClick(e) {
     resultField.innerText = firstFieldValue / secondFieldValue;
   } else if (operatorValue == "*") {
     resultField.innerText = firstFieldValue * secondFieldValue;
-  } else {
-    return alert("Operator must be some of the following: +, -, /, *");
   }
-
-  firstField.value = "";
-  secondField.value = "";
 
   historyTitle.style.display = "inline-block";
 
@@ -77,6 +66,11 @@ function onClick(e) {
       numberOfLength = historyUL.children.length;
     }
   }
+
+  firstField.value = "";
+  secondField.value = "";
+  operatorValue = "";
+
   addBtn.style.backgroundColor = "aquamarine";
   subtractBtn.style.backgroundColor = "aquamarine";
   multiplyBtn.style.backgroundColor = "aquamarine";
@@ -92,7 +86,6 @@ function onAdd(e) {
   subtractBtn.style.backgroundColor = "aquamarine";
   multiplyBtn.style.backgroundColor = "aquamarine";
   divideBtn.style.backgroundColor = "aquamarine";
-
 }
 
 function onSubtract(e) {
