@@ -14,6 +14,7 @@ let calcBtn = document.getElementById("calc-btn");
 let operatorValue = "";
 let numberOfLength = 0;
 
+//hide history title in the beginning
 historyTitle.style.display = "none";
 
 addBtn.addEventListener("click", onAdd);
@@ -31,10 +32,17 @@ function onCalculate(e) {
   let firstFieldValueForHistory = firstFieldValue;
   let secondFieldValueForHistory = secondFieldValue;
 
+  //check if both number field and operator are filled
   if (!firstFieldValue || !secondFieldValue || !operatorValue) {
     return alert("All fields are required!");
   }
 
+  //check if input is number, because on mobile device the input could be string
+  if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
+    return alert("Please enter a number!");
+  }
+
+  //check operator's current value
   if (operatorValue == "+") {
     resultField.innerText = firstFieldValue + secondFieldValue;
   } else if (operatorValue == "-") {
@@ -45,6 +53,7 @@ function onCalculate(e) {
     resultField.innerText = firstFieldValue * secondFieldValue;
   }
 
+  //show history title
   historyTitle.style.display = "inline-block";
 
   if (resultField.innerHTML != "") {
