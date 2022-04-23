@@ -32,14 +32,17 @@ function onCalculate(e) {
   let firstFieldValueForHistory = firstFieldValue;
   let secondFieldValueForHistory = secondFieldValue;
 
-  //check if both number field and operator are filled
-  if (!firstFieldValue || !secondFieldValue || !operatorValue) {
-    return alert("All fields are required!");
-  }
-
-  //check if input is number, because on mobile device the input could be string
-  if (isNaN(firstFieldValue) || isNaN(secondFieldValue)) {
-    return alert("Please enter a number!");
+  //check if both number field and operator are filled and both fields are number
+  if (
+    !firstFieldValue ||
+    !secondFieldValue ||
+    !operatorValue ||
+    isNaN(firstFieldValue) ||
+    isNaN(secondFieldValue)
+  ) {
+    return alert(
+      "Please fill both fields with numbers and choose an operator!"
+    );
   }
 
   //check operator's current value
